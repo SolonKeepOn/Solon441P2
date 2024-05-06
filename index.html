@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+// Name:Solon  NCC IN:223190715
+
+// Function to handle user input and calculate the average score  
+function calculateAverageScore() {  
+    // Ask the user if they need help with the calculation  
+    const needsHelp = confirm("Do you need help to calculate your average score?");  
+    if (!needsHelp) {  
+        console.log("You did not need help. Thank you for checking!");  
+        return;  
+    }  
+  
+    // Prompt the user to enter their full name  
+    const fullName = prompt("Please enter your full name:");  
+      
+    // Prompt the user to enter their grades for each unit  
+    const unit1Grade = parseFloat(prompt("Please enter your grade for unit 1:"));  
+    const unit2Grade = parseFloat(prompt("Please enter your grade for unit 2:"));  
+    const unit3Grade = parseFloat(prompt("Please enter your grade for unit 3:"));  
+    const unit4Grade = parseFloat(prompt("Please enter your grade for unit 4:"));  
+      
+    // Calculate the total score and average score  
+    const totalScore = unit1Grade + unit2Grade + unit3Grade + unit4Grade;  
+    const averageScore = totalScore / 4;  
+      
+    // Output the results to the console  
+    console.log(`Total: ${totalScore}`);  
+    console.log(`Average score: ${averageScore.toFixed(2)}`);  
+      
+    // Display a thank you message  
+    console.log(`Thank you, ${fullName}, for using the program.`);  
+}  
+  
+// Call the function to start the process  
+calculateAverageScore();
+  </script>
+
+</body>
+</html>
